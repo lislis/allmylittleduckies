@@ -1,0 +1,14 @@
+[remap]
+
+importer="com.nlaha.godotmidi"
+type="MidiResource"
+uid="uid://dltq5f5t81tjf"
+path="res://.godot/imported/drum.mid-2c531b1b5bebf2dad6c92a9741197421.res"
+
+[deps]
+
+source_file="res://midi/drum.mid"
+dest_files=["res://.godot/imported/drum.mid-2c531b1b5bebf2dad6c92a9741197421.res"]
+
+[params]
+

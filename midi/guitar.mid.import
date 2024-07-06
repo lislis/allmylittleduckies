@@ -1,0 +1,14 @@
+[remap]
+
+importer="com.nlaha.godotmidi"
+type="MidiResource"
+uid="uid://bhl80blg5488j"
+path="res://.godot/imported/guitar.mid-7500b22d6555981ac1d8cd83b3ec972c.res"
+
+[deps]
+
+source_file="res://midi/guitar.mid"
+dest_files=["res://.godot/imported/guitar.mid-7500b22d6555981ac1d8cd83b3ec972c.res"]
+
+[params]
+

@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://bf6ok7knns5ca"]
+
+[ext_resource type="Texture2D" uid="uid://cvstq6wo4wvi0" path="res://assets/bg.png" id="1_l68w1"]
+[ext_resource type="Script" path="res://Scenes/Main.gd" id="1_nl5l8"]
+[ext_resource type="PackedScene" uid="uid://m54f6msansh1" path="res://Scenes/Measure.tscn" id="3_pojqv"]
+[ext_resource type="AudioStream" uid="uid://bdfxm5iqngq17" path="res://assets/duckies-full-track2-loop.wav" id="4_8b8lb"]
+[ext_resource type="AudioStream" uid="uid://b6fjju0ynrwop" path="res://assets/duckies-full-track2.wav" id="5_1dice"]
+[ext_resource type="MidiResource" uid="uid://bhl80blg5488j" path="res://midi/guitar.mid" id="6_l1dn2"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_nl5l8")
+
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_l68w1")
+
+[node name="Measure" parent="." instance=ExtResource("3_pojqv")]
+position = Vector2(11, 23)
+
+[node name="musicLoop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8b8lb")
+
+[node name="musicIntro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_1dice")
+
+[node name="MidiPlayer" type="MidiPlayer" parent="."]
+midi = ExtResource("6_l1dn2")
+loop = true
+manual_process = true
+
+[node name="DuckieContainer" type="Node2D" parent="."]
+position = Vector2(334, 844)
+
+[connection signal="finished" from="musicLoop" to="." method="_on_music_loop_finished"]
+[connection signal="finished" from="musicIntro" to="." method="_on_music_intro_finished"]
+[connection signal="note" from="MidiPlayer" to="." method="_on_midi_player_note"]

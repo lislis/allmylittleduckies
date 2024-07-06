@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcs0ykcmh787w"]
+
+[ext_resource type="Texture2D" uid="uid://cf1sopt812gfl" path="res://assets/duckie.png" id="1_2xced"]
+[ext_resource type="Texture2D" uid="uid://da02he2fl6qcp" path="res://assets/duckie-tail.png" id="2_d83wn"]
+
+[node name="Duckie" type="Node2D"]
+
+[node name="Duckie" type="Sprite2D" parent="."]
+position = Vector2(-2, -3)
+texture = ExtResource("1_2xced")
+
+[node name="Duckie-tail" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 1)
+texture = ExtResource("2_d83wn")

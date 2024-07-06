@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci6lx1i737w5a"]
+
+[ext_resource type="Script" path="res://Scenes/Point.gd" id="1_2a1u2"]
+[ext_resource type="Texture2D" uid="uid://cfodkuujeircc" path="res://assets/point-yellow.png" id="1_ghj45"]
+
+[node name="Point" type="Node2D"]
+script = ExtResource("1_2a1u2")
+
+[node name="Point-yellow" type="Sprite2D" parent="."]
+position = Vector2(-2, -1)
+texture = ExtResource("1_ghj45")
